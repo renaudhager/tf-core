@@ -1,0 +1,16 @@
+#
+# PRIVATE VARIABLES
+#
+
+# CORE
+access_key             = "{YOUR_AWS_ACCESS_KEY}"
+secret_key             = "{YOUR_AWS_SECRET_KEY}"
+ssh_key                = "{YOUR_PUBLIC_SSH_KEY}"
+owner                  = "{YOUR_NAME}"
+vdc                    = "{YOUR_VIRTUAL_DC_ACRONYM}"
+tld                    = "{YOUR_DOMAIN}"
+
+
+# REMOTE STATE
+remote_state_bucket    = "{YOUR_BUCKET}"
+remote_state_key       = "{YOUR_KEY}"
