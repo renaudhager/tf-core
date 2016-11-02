@@ -9,8 +9,10 @@ This repo contain terrraform code to build core function any AWS DC :
 - Nginx LB
 - Puppetdb
 
+All instance provisionning is made by puppet in a masterless mode.
+
 You will need to create a file named : terraform.tfvars to store sensitives variables.
-Please terraform.tfvars.example.
+Please see terraform.tfvars.example.
 
 ## Limitation
 
