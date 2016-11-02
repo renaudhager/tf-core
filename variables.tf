@@ -44,3 +44,17 @@ variable "allowed_ips"           { default = "0.0.0.0/0" }
 #
 variable "puppet_agent_version"  { default = "1.7.0-1trusty" }
 variable "puppet_env"            { default = "aws" }
+
+#
+# RDS Configuration
+#
+variable "rds_instance"                { default = "db.t2.small" }
+variable "rds_version"                 { default = "9.4.5" }
+variable "rds_size"                    { default = "10" }
+variable "rds_name"                    { default = "puppetdb" }
+variable "rds_username"                {}
+variable "rds_password"                {}
+variable "rds_multi_az"                { default = "true" }
+variable "rds_maintenance_window"      { default = "Sun:01:00-Sun:04:00" }
+variable "rds_backup_window"           { default = "11:00-11:45" }
+variable "rds_backup_retention_period" { default = "3" }

@@ -14,3 +14,7 @@ tld                    = "{YOUR_DOMAIN}"
 # REMOTE STATE
 remote_state_bucket    = "{YOUR_BUCKET}"
 remote_state_key       = "{YOUR_KEY}"
+
+# Puppetdb DB
+rds_username           = "{YOUR_DB_USER}"
+rds_password           = "{YOUR_DB_USER_PWD}"

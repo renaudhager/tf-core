@@ -195,6 +195,19 @@ resource "aws_security_group" "core_elb" {
 
 }
 
+# PUPPET DB RDS
+resource "aws_security_group" "puppetdb_rds" {
+  name        = "${var.owner}_puppet_puppetdb_rds"
+  description = "Puppet DB RDS SG"
+  vpc_id      = "${aws_vpc.default.id}"
+
+  ingress {
+    from_port   = 5432
+    to_port     = 5432
+    protocol    = "tcp"
+    security_groups = ["${aws_security_group.puppetdb.id}"]
+  }
+}
 
 #
 # Outputs
