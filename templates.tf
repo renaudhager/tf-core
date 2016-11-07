@@ -10,6 +10,7 @@ resource "template_file" "jump_host" {
 
 resource "template_file" "puppetdb" {
   template               = "${file("cloudinit/default.yml")}"
+  count                  = "${length( split( ",", lookup( var.azs, var.region ) ) )}"
 
   vars {
     puppet_env           = "${var.puppet_env}"

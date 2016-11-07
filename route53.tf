@@ -24,7 +24,8 @@ resource "aws_route53_record" "puppetdb" {
   name    = "${var.vdc}-puppetdb0${count.index+1}"
   type    = "A"
   ttl     = "${var.route53_ttl}"
-  records = ["${aws_instance.puppetdb.private_ip}"]
+  records = ["${element(aws_instance.puppetdb.*.private_ip, count.index)}"]
+  count   = "${length( split( ",", lookup( var.azs, var.region ) ) )}"
 }
 
 resource "aws_route53_record" "nginx" {

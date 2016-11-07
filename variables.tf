@@ -5,16 +5,19 @@ variable "access_key"          {}
 variable "secret_key"          {}
 variable "owner"               {}
 variable "tld"                 {}
+variable "additional_domain"   {}
 variable "vdc"                 {}
+variable "ssh_key_name"        {}
 variable "region"              { default = "eu-west-1" }
 
 variable "azs" {
   default = {
-    "eu-west-1"    = "a,b,c"
-    "eu-central-1" = "a,b"
-    "us-east-1"    = "a,b,c"
-    "us-west-1"    = "a,c"
-    "us-west-2"    = "b,c"
+    "eu-west-1"      = "a,b,c"
+    "eu-central-1"   = "a,b"
+    "us-east-1"      = "a,b,c"
+    "us-west-1"      = "a,c"
+    "us-west-2"      = "b,c"
+    "ap-southeast-2" = "a,b,c"
   }
 }
 

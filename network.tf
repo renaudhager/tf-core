@@ -19,7 +19,7 @@ resource "aws_vpc" "default" {
 # DHCP set options
 #
 resource "aws_vpc_dhcp_options" "default" {
-  domain_name         = "${var.tld} node.ew1.consul node.consul ew1.lan"
+  domain_name         = "${var.tld} ${var.additional_domain}"
   domain_name_servers = ["172.16.8.2"]
 
   tags {

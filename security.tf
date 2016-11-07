@@ -119,6 +119,14 @@ resource "aws_security_group" "nginx" {
     cidr_blocks = ["${var.allowed_ips}"]
   }
 
+  # Allow access to nginx
+  ingress {
+    from_port   = 8081
+    to_port     = 8081
+    protocol    = "tcp"
+    cidr_blocks = ["${var.allowed_ips}"]
+  }
+
   tags {
     Name  = "${var.owner}_nginx"
     owner = "${var.owner}"
